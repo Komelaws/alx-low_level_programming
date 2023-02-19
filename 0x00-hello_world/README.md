@@ -5,3 +5,4 @@
 4. Hello, puts
 5. Hello, printf
 6. Size is not grandeur, and territory does not make a nation
+7. Intel - Write a script that generates the assembly code (Intel syntax) of a C code and save it in an output file`
