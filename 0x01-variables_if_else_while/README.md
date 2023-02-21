@@ -1,2 +1,1 @@
-
-studying software engineering with ALX, currently, I'm learning how to program with the C - laguage, learning all about arithmetic operators, functions and so many other stuffs
+C - programming in the ALX_SWE progranmme, i'm learning all about data manipulation, structures, arithmetic operators and lots more
