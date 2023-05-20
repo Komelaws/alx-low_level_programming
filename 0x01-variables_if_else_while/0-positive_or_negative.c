@@ -4,11 +4,10 @@
 
 /**
  * main - generate random numbers
- * @n: This is where the random number would be stored
+ * @n: Random number generator
  *
- * Description: This is a function that generates a random
- * number eaach time that the program is run and to print
- * out the type of that is generated.
+ * Description: A funciton to generate
+ * random numbers
  * Return: Always 0 (success)
  */
 int main(void)
