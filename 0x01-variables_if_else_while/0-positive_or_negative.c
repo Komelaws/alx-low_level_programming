@@ -4,10 +4,7 @@
 
 /**
  * main - generate random numbers
- * @n: Random number generator
  *
- * Description: A funciton to generate
- * random numbers
  * Return: Always 0 (success)
  */
 int main(void)
