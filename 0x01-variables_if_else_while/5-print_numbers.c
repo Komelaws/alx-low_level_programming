@@ -13,7 +13,7 @@ int main(void)
 	x = 0;
 	while (x < 10)
 	{
-		printf("%d\n", x);
+		putchar(x);
 		x++;
 	}
 	putchar('\n');
