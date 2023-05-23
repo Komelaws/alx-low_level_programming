@@ -1,24 +1,20 @@
 #include <stdio.h>
 
 /**
- * main - Entry point
+ * main - print reverse lower case alphabet
  *
  * Return: Always 0 (success)
  */
 int main(void)
 {
-	int x;
+	char x;
+	x = 'z';
 
-	x = 97;
-	while (x < 123)
+	while (x >= 'a')
 	{
-		if (x != 101 && x != 113)
-		{
-			putchar(x);
-			x++;
-		}
+		putchar(x);
+		x--;
 	}
-
 	putchar('\n');
 
 	return (0);

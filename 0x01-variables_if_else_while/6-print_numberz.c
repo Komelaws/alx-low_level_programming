@@ -1,24 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
- * main - Entry point
+ * main - print all single base 10 num
  *
  * Return: Always 0 (success)
  */
 int main(void)
 {
 	int x;
-
-	x = 97;
-	while (x < 123)
+	
+	x = 0;
+	while (x < 10)
 	{
-		if (x != 101 && x != 113)
-		{
-			putchar(x);
-			x++;
-		}
+		putchar(x);
+		x++;
 	}
-
 	putchar('\n');
 
 	return (0);
