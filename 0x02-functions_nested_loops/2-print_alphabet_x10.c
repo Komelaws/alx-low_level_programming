@@ -9,10 +9,10 @@
 void print_alphabet_x10(void)
 {
 	char x;
-	
-	x = 'a';
+	int i;
+	int j;
 
-	int i, j;
+	x = 'a';
 
 	for (i = 1; i <= 10; i++)
 	{
@@ -22,7 +22,5 @@ void print_alphabet_x10(void)
 			x++;
 		}
 		putchar('\n');
-	}	
-
-	return (0);
+	}
 }
