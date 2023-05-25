@@ -2,11 +2,11 @@
 #include "main.h"
 
 /**
- * main - prints all the alphabet
+ * print_alphabet - prints all the alphabet
  *
  * Return: Always 0 (success)
  */
-int main(void)
+void print_alphabet(void)
 {
 	char x = 'a';
 
