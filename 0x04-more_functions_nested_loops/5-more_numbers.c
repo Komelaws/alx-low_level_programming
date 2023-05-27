@@ -2,7 +2,7 @@
 #include "main.h"
 
 /**
- * more_numbers - printint 10x the numbers from 0 throgh 14
+ * more_numbers - function to print 10 rows of numbers
  *
  * Return: Always 0 (success)
  */
