@@ -9,12 +9,19 @@
  *
  * Return: Always 0
  */
-int main(__attribute__((unused)) int argc, char *argv[])
+int main(__attribute__((unused)) int argc,__attribute__((unused)) char *argv[])
 {
 	int i;
+	int sum;
 
-	for (i = 0; i <= argc; i++)
+	sum = 0;
+
+	for (i = 1; i < argc; i++)
 	{
-		printf("%s\n", argv[i]);
+		sum = atoi(argv[1]) * atoi(argv[2]);
 	}
+
+	printf("%d\n", sum);
+
+	return (0);
 }

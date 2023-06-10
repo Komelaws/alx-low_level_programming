@@ -10,6 +10,15 @@
  */
 int main(int argc, __attribute__((unused)) char *argv[])
 {
-	printf("%d\n", argc);
+	int i;
+	int sum;
+
+	sum = 0;
+
+	for (i = 1; i < argc; i++)
+	{
+		sum++;
+	}
+	printf("%d\n", sum);
 	return (0);
 }
