@@ -3,6 +3,8 @@
 
 /**
  * main - Entry point
+ * @arc: argument count
+ * @argv: argument vector
  *
  * Return: Always 0
  */
