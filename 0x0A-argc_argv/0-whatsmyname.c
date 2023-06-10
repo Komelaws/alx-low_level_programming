@@ -2,9 +2,9 @@
 #include <stdlib.h>
 
 /**
- * main - Entry point
- * @arc: argument count
- * @argv: argument vector
+ * main - A program that prints my name
+ * @arc: The number of argument passed
+ * @argv: The arguments passed
  *
  * Return: Always 0
  */
