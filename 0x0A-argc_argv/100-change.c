@@ -11,6 +11,8 @@
 int main(int argc, char *argv[])
 {
 	int i;
+	int coins[] = {25, 10, 5, 2, 1};
+	int cents;
 
 	for (i = 0; i < argc; i++)
 	{

@@ -16,12 +16,19 @@ int main(__attribute__((unused)) int argc,__attribute__((unused)) char *argv[])
 
 	sum = 0;
 
-	for (i = 1; i < argc; i++)
+	if (argc <= 1)
 	{
-		sum = atoi(argv[1]) * atoi(argv[2]);
+		printf("Error\n");
 	}
+	else
+	{
+		for (i = 1; i < argc; i++)
+		{
+			sum = atoi(argv[1]) * atoi(argv[2]);
+		}
 
-	printf("%d\n", sum);
+		printf("%d\n", sum);
+	}
 
 	return (0);
 }

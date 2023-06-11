@@ -15,6 +15,13 @@ int main(int argc, char *argv[])
 
 	sum = 0;
 
+	for (i = 1; atoi(argv[i]) == atoi(argv[i]) * 1; i++)
+	{
+		printf("Error\n");
+
+		return (1);
+	}
+
 	if (argc != 0)
 	{
 		for (i = 1; i < argc; i++)
