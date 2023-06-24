@@ -3,7 +3,7 @@
 #include "variadic_functions.h"
 
 /**
- * print_number - Function that prints numbers, followed
+ * print_numbers - Function that prints numbers, followed
  * by a new line
  * @separator: A string of characters used as separaators
  * @n: Numbers of integers passed to the functions
