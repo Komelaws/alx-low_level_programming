@@ -8,16 +8,9 @@
  */
 void print_name(char *name,__attribute__((unused))void (*f)(char *))
 {
-	unsigned int i;
+	if (name == NULL || f == NULL)
+		return;
 
-	i = 0;
-	while (name[i])
-	{
-		putchar(name[i]);
-		i++;
-	}
+	f(name);
 
-	
-
-	putchar('\0');
 }
