@@ -5,7 +5,6 @@
  * main - Program to print all the arguments it receives
  * @argc: Number of arguments
  * @argv: Arguments Received
- * @i: Iterator
  *
  * Return: Always 0
  */

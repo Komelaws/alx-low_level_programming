@@ -6,10 +6,8 @@
  * an arguments
  * @argc: Number of arguments
  * @argv: The Arguments passed to the program
- * @a: Integer value
- * @b: Another integer value
  *
- * Return: Alwasy 0
+ * Return: Always 0
  */
 int main(int argc, char *argv[])
 {
