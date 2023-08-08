@@ -9,7 +9,6 @@ int _strlen(char *str);
  * space in memory, which contains a copy of the string given as
  * parameter
  * @str: String to be copied
- * @newstr: The copy of str
  *
  * Return: newstr
  */
@@ -26,7 +25,7 @@ char *_strdup(char *str)
 
 	size = _strlen(str);
 
-	newstr = (char *)malloc(sizeof(char) * size);
+	newstr = (char *)malloc(sizeof(char) * size + 1);
 
 	while (i < size)
 	{
