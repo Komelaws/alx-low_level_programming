@@ -8,7 +8,6 @@ int _strlen(char *str);
  * str_concat - Function to concatenate two strings
  * @s1: Main string
  * @s2: String to concatenate to s1
- * @newstr: Newly allocated space in memory
  *
  * Return: newstr
  */
