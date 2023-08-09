@@ -22,31 +22,37 @@ char *str_concat(char *s1, char *s2)
 
 	size1 = _strlen(s1);
 	size2 = _strlen(s2);
-	size = size1 + size2;
+	size = size1 + size2 + 1;
 	newstr = (char *)malloc(sizeof(char) * size);
 
 	if (newstr == NULL)
 		return (NULL);
 
-
-	i = 0;
-	while (i < size1)
+	if (s1 == NULL || s2 == NULL)
 	{
-		newstr[i] = s1[i];
-
-		i++;
+		return (newstr);
 	}
-
-	j = 0;
-	while (j < size2)
+	else
 	{
-		newstr[i] = s2[j];
+		i = 0;
+		while (i < size1)
+		{
+			newstr[i] = s1[i];
 
-		j++;
-		i++;
+			i++;
+		}
+
+		j = 0;
+		while (j < size2)
+		{
+			newstr[i] = s2[j];
+
+			j++;
+			i++;
+		}
+
+		newstr[i] = '\0';
 	}
-
-	newstr[i] = '\0';
 
 	return (newstr);
 
