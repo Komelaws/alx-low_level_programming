@@ -28,9 +28,23 @@ char *str_concat(char *s1, char *s2)
 	if (newstr == NULL)
 		return (NULL);
 
-	if (s1 == NULL || s2 == NULL)
+	if (s1 == NULL)
 	{
-		return (newstr);
+		i = 0;
+		while (i < size2)
+		{
+			newstr[i] = s2[i];
+			i++;
+		}
+	}
+	else if (s2 == NULL)
+	{
+		i = 0;
+		while (i < size1)
+		{
+			newstr[i] = s1[i];
+			i++;
+		}
 	}
 	else
 	{
@@ -50,9 +64,9 @@ char *str_concat(char *s1, char *s2)
 			j++;
 			i++;
 		}
-
-		newstr[i] = '\0';
 	}
+
+	newstr[i] = '\0';
 
 	return (newstr);
 
