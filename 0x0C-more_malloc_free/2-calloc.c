@@ -3,7 +3,7 @@
 #include "main.h"
 
 /**
- * _callo - Function that allocates memory to an array
+ * _calloc - Function that allocates memory to an array
  * using malloc
  * @nmemb: Members of the array
  * @size: Size of each array
