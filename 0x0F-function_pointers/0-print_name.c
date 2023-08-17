@@ -12,7 +12,12 @@ void print(char *str);
  */
 void print_name(char *name, void (*f)(char *))
 {
-	f(name);
+	if (name != NULL)
+	{
+		f(name);
+	}
+	else
+		return;
 }
 
 
@@ -24,9 +29,16 @@ void print_name(char *name, void (*f)(char *))
  */
 void print(char *str)
 {
-	while (*str)
+	if (str != NULL)
 	{
-		putchar(*str++);
-		str++;
+		while (*str)
+		{
+			putchar(*str++);
+			str++;
+		}
+	}
+	else
+	{
+		return;
 	}
 }
