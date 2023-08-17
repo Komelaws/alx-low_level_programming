@@ -11,10 +11,12 @@
  */
 int compare(int n)
 {
-	if (n != 98)
+	if ((n >= 65 && n <= 90) || (n >= 97 && n <= 122))
+		return (0);
+	else if (!((n >= 65 && n<= 90) || (n >= 97 && n <= 122)))
 		return (1);
 	else
-		return (0);
+		return (-1);
 }
 
 
@@ -34,21 +36,23 @@ int int_index(int *array, int size, int (*cmp)(int))
 {
 	int i;
 	int ret;
-	int val;
 
 	if (size <= 0)
 		return (-1);
 
-	val = 0;
 	ret = 0;
 	i = 0;
-	while (size)
+	while (size--)
 	{
 		ret = cmp(array[i]);
 
-		if (ret != 0)
+		i++;
+
+		if (ret == 0)
 			return (i);
 	}
+
+	return (i);
 
 
 }
