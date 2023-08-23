@@ -3,22 +3,22 @@
 #include "main.h"
 
 /**
- * create_array - Function that create an array of chars,
- * and initialize it with a specific char
- * @size: The size of the array
- * @c: Char to initialize the array with
+ * create_array - Fucntion that creates an array of char
+ * and initializes the array
+ * @size: Size of the array
+ * @c: Character to initialize the array
  *
  * Return: str
  */
 char *create_array(unsigned int size, char c)
 {
-	unsigned int i;
 	char *str;
+	unsigned int i;
 
 	if (size == 0)
 		return (NULL);
 
-	str = (char *)malloc(sizeof(char) * size);
+	str = malloc(size * sizeof(char));
 
 	if (str == NULL)
 		return (NULL);
@@ -29,7 +29,6 @@ char *create_array(unsigned int size, char c)
 		str[i] = c;
 		i++;
 	}
-
 
 	return (str);
 }
