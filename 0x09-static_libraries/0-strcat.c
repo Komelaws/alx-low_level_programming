@@ -27,13 +27,10 @@ int _strlen(char *str)
  *
  * Return: dest
  */
-char *_strcat(char *dest; char *src)
+char *_strcat(char *dest, char *src)
 {
 	int i;
 	int lend;
-
-	if (*src = '\0')
-		return (dest);
 
 	i = 0;
 	lend = _strlen(dest);

@@ -10,6 +10,9 @@
  */
 char *_memset(char *s, char b, unsigned int n)
 {
+	unsigned int i;
+
+	i = 0;
 	if (n <= 0)
 		return (s);
 
