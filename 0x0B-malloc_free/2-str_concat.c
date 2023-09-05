@@ -65,7 +65,8 @@ char *str_concat(char *s1, char *s2)
 	}
 	else if ((s1 == NULL) && (s2 == NULL))
 	{
-		return (NULL);
+		new_str = "";
+		return (new_str);
 	}
 	else
 	{
