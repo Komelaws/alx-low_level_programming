@@ -2,6 +2,30 @@
 #include <stdlib.h>
 
 /**
+ * _strlen - Function that returns the length of a
+ * string
+ * @str: String to return its length
+ *
+ * Return: len
+ */
+int _strlen(char *str)
+{
+	int len;
+
+	len = 0;
+	while (*str++)
+	{
+		len++;
+	}
+
+	return (len);
+}
+
+
+
+
+
+/**
  * _strdup - Function that returns a pointer to a newly
  * allocated space in memory, which contains a string
  * @str: String value to be copied to new location
@@ -18,7 +42,7 @@ char *_strdup(char *str)
 		return (NULL);
 	}
 
-	new = (char *)malloc(1 + sizeof(str));
+	new = (char *)malloc((_strlen(str) * sizeof(char) + 1));
 	if (new == NULL)
 	{
 		return (NULL);
