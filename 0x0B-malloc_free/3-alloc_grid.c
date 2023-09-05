@@ -30,6 +30,11 @@ int **alloc_grid(int width, int height)
 	while (i < height)
 	{
 		two_d[i++] = (int *)malloc(width * sizeof(int));
+		if (two_d[i] == NULL)
+		{
+			free(two_d[i]);
+			return (NULL);
+		}
 	}
 
 	i = 0;
