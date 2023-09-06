@@ -31,24 +31,41 @@ char *str_concat(char *s1, char *s2)
 	int i;
 	char *new_str;
 
-	new_str = (char *)malloc((_strlen(s1) + _strlen(s2) + 1) * sizeof(char));
-	if (new_str == NULL)
+	if (s1 != NULL && s2 != NULL)
 	{
-		return (NULL);
+		new_str = (char *)malloc((_strlen(s1) + _strlen(s2) + 1) * sizeof(char));
+		if (new_str == NULL)
+			return (NULL);
+		i = 0;
+		while (*s1)
+			new_str[i++] = *s1++;
+		while (*s2)
+			new_str[i++] = *s2++;
+		new_str[i] = '\0';
 	}
-
-	i = 0;
-	while (*s1)
+	else if (s1 == NULL && s2 == NULL)
 	{
-		new_str[i++] = *s1++;
+		new_str = '\0';
 	}
-
-	while (*s2)
+	else if ((s1 != NULL) && s2 == NULL)
 	{
-		new_str[i++] = *s2++;
+		new_str = malloc((_strlen(s2) + 1) * sizeof(char));
+		if (new_str == NULL)
+			return (NULL);
+		i = 0;
+		while (*s2)
+			new_str[i++] = *s2++;
+		new_str[i] = '\0';
 	}
-
-	new_str[i] = '\0';
-
+	else if ((s1 != NULL) && (s2 == NULL))
+	{
+		new_str = (char *)malloc((_strlen(s1) + 1) * sizeof(char));
+		if (new_str == NULL)
+			return (NULL);
+		i = 0;
+		while (*s1)
+			new_str[i++] = *s1++;
+		new_str[i] = '\0';
+	}
 	return (new_str);
 }
