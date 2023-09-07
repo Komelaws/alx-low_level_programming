@@ -39,10 +39,9 @@ char *argstostr(int ac, char *av[])
 			j++;
 			k++;
 		}
+		string[k++] = '\n';
 		i++;
 	}
-	if (!(string[k]))
-		string[k++] = '\n';
 
 	return (string);
 }
