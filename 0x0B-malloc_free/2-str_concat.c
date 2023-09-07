@@ -52,20 +52,20 @@ char *str_concat(char *s1, char *s2)
 		new_str = malloc((_strlen(s2) + 1) * sizeof(char));
 		if (new_str == NULL)
 			return (NULL);
+		new_str = "";
 		i = 0;
 		while (*s2)
 			new_str[i++] = *s2++;
-		new_str = "";
 	}
 	else if ((s1 != NULL) && (s2 == NULL))
 	{
 		new_str = (char *)malloc((_strlen(s1) + 1) * sizeof(char));
 		if (new_str == NULL)
 			return (NULL);
+		new_str = "";
 		i = 0;
 		while (*s1)
 			new_str[i++] = *s1++;
-		new_str = "";
 	}
 	return (new_str);
 }
