@@ -45,7 +45,7 @@ char *str_concat(char *s1, char *s2)
 	}
 	else if (s1 == NULL && s2 == NULL)
 	{
-		new_str = '\0';
+		new_str = "";
 	}
 	else if ((s1 != NULL) && s2 == NULL)
 	{
@@ -55,7 +55,7 @@ char *str_concat(char *s1, char *s2)
 		i = 0;
 		while (*s2)
 			new_str[i++] = *s2++;
-		new_str[i] = '\0';
+		new_str = "";
 	}
 	else if ((s1 != NULL) && (s2 == NULL))
 	{
@@ -65,7 +65,7 @@ char *str_concat(char *s1, char *s2)
 		i = 0;
 		while (*s1)
 			new_str[i++] = *s1++;
-		new_str[i] = '\0';
+		new_str = "";
 	}
 	return (new_str);
 }
