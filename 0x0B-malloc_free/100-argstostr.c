@@ -2,64 +2,47 @@
 #include <stdlib.h>
 
 /**
- * _strlen - Function that returns the length of a string
- * @av: The number of strings in a the array
- * @size: The size of the array
+ * argstostr - Function that concatenates its programs arguments
+ * @ac: The number of arguments passed
+ * @av: A pointer to an array of the arguments passed
  *
- * Return: len
+ * Return: string
  */
-int _strlen(char **av, int size)
+char *argstostr(int ac, char *av[])
 {
-	int i;
+	int i, j, k;
 	int len;
-
-	i = 0;
-	len = 0;
-	while (i < size)
-	{
-		while ((*(*av))++)
-		{
-			len++;
-		}
-		i++;
-	}
-	return (len);
-}
-
-/**
- * argstostr - Function that concatenates all its arguments
- * @ac: The number of arguments
- * @av: A string of the arguments
- *
- * Return: args
- */
-char *argstostr(int ac, char **av)
-{
-	int i;
-	int j;
-	char *args;
+	char *string;
 
 	if (ac == 0 || av == NULL)
 		return (NULL);
 
-	args = (char *)malloc((_strlen(av, ac) + 1) * sizeof(char));
-	if (args == NULL)
+	for (i = 0; i < ac; i++)
+	{
+		for (j = 0; av[i][j]; j++)
+			len++;
+	}
+	len += ac;
+
+	string = malloc(len * sizeof(*av) + 1);
+	if (string == NULL)
 		return (NULL);
 
 	i = 0;
-	while (i <= ac)
+	k = 0;
+	while (i < ac)
 	{
 		j = 0;
-		while (*(av[i]) + j)
+		while (av[i][j])
 		{
-			args[j] = *(*av + i) + j;
+			string[k] = av[i][j];
 			j++;
-			if (!(*(*av + i) + j))
-				args[j] = '\n';
-
+			k++;
 		}
 		i++;
 	}
+	if (!(string[k]))
+		string[k++] = '\n';
 
-	return (args);
+	return (string);
 }
