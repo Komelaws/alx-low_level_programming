@@ -32,37 +32,50 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 	unsigned int i;
 	char *str;
 
-	if (n <= 0)
+	if (s1 == NULL && s2 == NULL)
 	{
-		str = malloc(sizeof(s1) + 1);
-		if (str == NULL)
-			return (NULL);
-
-		i = 0;
-		while (i < _strlen(s1))
-		{
-			str[i] = s1[i];
-			i++;
-		}
-		str[i] = '\0';
+		str = "";
+		return (str);
 	}
-	else if (n >= _strlen(s2))
-	{
-		str = malloc((_strlen(s1) * _strlen(s2)) + 1);
-		if (str == NULL)
-			return (NULL);
 
-		i = 0;
-		while (i < _strlen(s1))
-		{
+	if (n >= _strlen(s2))
+		str = malloc((_strlen(s1) + _strlen(s2)) * sizeof(char) + 1);
+	else if (n < _strlen(s2))
+		str = malloc((_strlen(s1) + n) * sizeof(char) + 1);
+	else if (n <= 0)
+		str = malloc(_strlen(s1) * sizeof(char) + 1);
+
+	if (str == NULL)
+		return (NULL);
+
+	if ((s1 != NULL && s2 != NULL) && (n >= _strlen(s2)))
+	{
+		for (i = 0; i < _strlen(s1); i++)
 			str[i] = s1[i];
-			i++;
-		}
-		while (*s2)
+		for (; *s2; i++)
+			str[i] = *s2++;
+	}
+	else if ((s1 != NULL && s2 != NULL) && (n < _strlen(s2)))
+	{
+		for (i = 0; i < _strlen(s1); i++)
+			str[i] = s1[i];
+		for (; n; i++)
 		{
 			str[i] = *s2++;
+			n--;
 		}
-		str[i] = '\0';
 	}
+	else if (s1 == NULL && s2 != NULL)
+	{
+		for (i = 0; i < _strlen(s2); i++)
+			str[i] = s2[i];
+	}
+	else if (s1 != NULL && s2 == NULL)
+	{
+		for (i = 0; i < _strlen(s1); i++)
+			str[i] = s1[i];
+	}
+
+	str[i] = '\0';
 	return (str);
 }
