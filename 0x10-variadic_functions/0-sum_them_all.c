@@ -6,7 +6,7 @@
  * sum_them_all - Function that sums up all its arguments
  * @n: The number of arguments
  *
- * Reutrn: sum
+ * Return: sum
  */
 int sum_them_all(const unsigned int n, ...)
 {
