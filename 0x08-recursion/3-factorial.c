@@ -19,5 +19,5 @@ int factorial(int n)
 
 	fact = n * factorial(n - 1);
 
-	return fact;
+	return (fact);
 }
