@@ -9,7 +9,7 @@
  */
 int real_root(int num, int i)
 {
-	if ((i * i > num) || (i * i < num))
+	if (i * i > num)
 	{
 		return (-1);
 	}
@@ -17,7 +17,7 @@ int real_root(int num, int i)
 	if (i * i == num)
 		return (i);
 
-	return (real_root(num, i + 1);
+	return (real_root(num, i + 1));
 }
 
 /**
