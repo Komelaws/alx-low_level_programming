@@ -9,7 +9,7 @@
  *
  * Return: Nothing
  */
-void print_string(const char *separator, const unsigned int n, ...)
+void print_strings(const char *separator, const unsigned int n, ...)
 {
 	unsigned int i;
 	va_list list;
@@ -24,8 +24,10 @@ void print_string(const char *separator, const unsigned int n, ...)
 			printf("nil");
 		}
 		else
-			printf("%s", va_arg(list, char *));
+			printf("%s", va_arg(list, const char *));
+
 		i++;
+
 		if (i != n)
 		{
 			if (separator == NULL)
