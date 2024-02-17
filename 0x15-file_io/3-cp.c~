@@ -1,0 +1,11 @@
+#include "main.h"
+
+/**
+ * copy_to_file - Copies content from a file
+ * @file_from: Source file
+ * @file_to: Destination file
+ *
+ * Return: 1 on success,
+ * -1 on failure
+ */
+int copycocopy
